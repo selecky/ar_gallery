@@ -1,9 +1,5 @@
-import 'package:ar_gallery/generic/widgets/app_button_icon.dart';
-import 'package:ar_gallery/generic/widgets/app_button_text_unity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
-
-import 'package:go_router/go_router.dart';
 
 class HelmetScreen extends StatefulWidget {
   const HelmetScreen({super.key});
@@ -29,7 +25,6 @@ class _HelmetScreenState extends State<HelmetScreen> {
           onUnityCreated: _onUnityCreated,
           onUnitySceneLoaded: onUnitySceneLoaded,
           useAndroidViewSurface: true, // faster
-          borderRadius: const BorderRadius.all(Radius.circular(70)),
           runImmediately: true,
           fullscreen: false,
         ),
