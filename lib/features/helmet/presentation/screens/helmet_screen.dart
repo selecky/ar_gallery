@@ -25,8 +25,6 @@ class _HelmetScreenState extends State<HelmetScreen> {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Center(child: Text('TEST')),
-
         UnityWidget(
           onUnityCreated: _onUnityCreated,
           onUnitySceneLoaded: onUnitySceneLoaded,
@@ -35,40 +33,40 @@ class _HelmetScreenState extends State<HelmetScreen> {
           runImmediately: true,
           fullscreen: false,
         ),
-        Positioned(
-          top: 16,
-          left: 16,
-          child: AppButtonIcon(
-            iconData: Icons.arrow_back,
-            onTap: () {
-              context.pop();
-            },
-          ),
-        ),
-        Align(
-          alignment: Alignment.topCenter,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 16),
-            child: AppButtonTextUnity(text: 'Reset', width: 96, onTap: () {}),
-          ),
-        ),
-        Align(
-          alignment: Alignment.bottomCenter,
-          child: Padding(
-            padding: const EdgeInsets.only(bottom: 40),
-            child: Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                AppButtonIcon(iconData: Icons.arrow_back_ios_new, onTap: () {}),
-                const SizedBox(width: 16),
-                AppButtonIcon(iconData: Icons.ac_unit, onTap: () {}),
-                const SizedBox(width: 16),
-                AppButtonIcon(iconData: Icons.arrow_forward_ios, onTap: () {}),
-              ],
-            ),
-          ),
-        ),
+        // Positioned(
+        //   top: 16,
+        //   left: 16,
+        //   child: AppButtonIcon(
+        //     iconData: Icons.arrow_back,
+        //     onTap: () {
+        //       context.pop();
+        //     },
+        //   ),
+        // ),
+        // Align(
+        //   alignment: Alignment.topCenter,
+        //   child: Padding(
+        //     padding: const EdgeInsets.only(top: 16),
+        //     child: AppButtonTextUnity(text: 'Reset', width: 96, onTap: () {}),
+        //   ),
+        // ),
+        // Align(
+        //   alignment: Alignment.bottomCenter,
+        //   child: Padding(
+        //     padding: const EdgeInsets.only(bottom: 40),
+        //     child: Row(
+        //       mainAxisSize: MainAxisSize.max,
+        //       mainAxisAlignment: MainAxisAlignment.center,
+        //       children: [
+        //         AppButtonIcon(iconData: Icons.arrow_back_ios_new, onTap: () {}),
+        //         const SizedBox(width: 16),
+        //         AppButtonIcon(iconData: Icons.ac_unit, onTap: () {}),
+        //         const SizedBox(width: 16),
+        //         AppButtonIcon(iconData: Icons.arrow_forward_ios, onTap: () {}),
+        //       ],
+        //     ),
+        //   ),
+        // ),
       ],
     );
   }
