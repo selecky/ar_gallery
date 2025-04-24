@@ -1,6 +1,4 @@
 import 'package:ar_gallery/features/helmet/presentation/widgets/back_button_unity.dart';
-import 'package:ar_gallery/features/helmet/presentation/widgets/control_buttons_unity.dart';
-import 'package:ar_gallery/features/helmet/presentation/widgets/reset_button_unity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
@@ -55,5 +53,3 @@ class _HelmetScreenState extends State<HelmetScreen> {
     // Avoid calling resume() here directly — wait for the scene to load
   }
 }
-
-

@@ -33,7 +33,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               svgAssetName: 'assets/images/helmet.svg',
               title: Strings.screen_title_helmet.tr(),
-            )
+            ),
           ],
         ),
       ),

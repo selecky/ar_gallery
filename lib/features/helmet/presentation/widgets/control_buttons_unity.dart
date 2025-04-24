@@ -2,9 +2,7 @@ import 'package:ar_gallery/generic/widgets/app_button_icon.dart';
 import 'package:flutter/material.dart';
 
 class ControlButtonsUnity extends StatelessWidget {
-  const ControlButtonsUnity({
-    super.key,
-  });
+  const ControlButtonsUnity({super.key});
 
   @override
   Widget build(BuildContext context) {

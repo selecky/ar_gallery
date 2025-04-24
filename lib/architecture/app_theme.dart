@@ -17,7 +17,7 @@ ThemeData _getAppTheme() {
         color: App.appTheme.app_textColor,
       ),
     ),
-    cardTheme: CardTheme(color: App.appTheme.app_cardColor,),
+    cardTheme: CardTheme(color: App.appTheme.app_cardColor),
     textTheme: TextTheme(
       displayLarge: TextStyle(
         fontSize: 64,
