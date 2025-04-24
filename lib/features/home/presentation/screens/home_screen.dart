@@ -1,3 +1,4 @@
+import 'package:ar_gallery/features/dark_mode/presentation/widgets/dark_mode_switch.dart';
 import 'package:ar_gallery/features/home/presentation/blocs/home_bloc.dart';
 import 'package:ar_gallery/features/home/presentation/widgets/home_tile.dart';
 import 'package:ar_gallery/generic/strings.dart';
@@ -19,22 +20,25 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return AppScreen(
-      title: Strings.screen_title_home.tr(),
-      hasBackButton: false,
-      child: Padding(
-        padding: const EdgeInsets.only(top: 8),
-        child: Wrap(
-          children: [
-            HomeTile(
-              onTap: () {
-                context.read<HomeBloc>().add(GoToHelmetScreenEvent(context: context));
-                _log.info('helmet icon tapped');
-              },
-              svgAssetName: 'assets/images/helmet.svg',
-              title: Strings.screen_title_helmet.tr(),
-            ),
-          ],
+    return Scaffold(
+      appBar: AppBar(title: Text(Strings.app_title), actions: const [DarkModeSwitch()]),
+      body: AppScreen(
+        title: Strings.screen_title_home.tr(),
+        hasBackButton: false,
+        child: Padding(
+          padding: const EdgeInsets.only(top: 8),
+          child: Wrap(
+            children: [
+              HomeTile(
+                onTap: () {
+                  context.read<HomeBloc>().add(GoToHelmetScreenEvent(context: context));
+                  _log.info('helmet icon tapped');
+                },
+                svgAssetName: 'assets/images/helmet.svg',
+                title: Strings.screen_title_helmet.tr(),
+              ),
+            ],
+          ),
         ),
       ),
     );

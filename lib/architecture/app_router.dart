@@ -2,40 +2,25 @@ part of 'app.dart';
 
 final _log = Logger('app_router');
 
-final GlobalKey<NavigatorState> _rootNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'root');
-final GlobalKey<NavigatorState> _shellNavigatorKey = GlobalKey<NavigatorState>(debugLabel: 'shell');
-
 final _appRouter = GoRouter(
-  navigatorKey: _rootNavigatorKey,
   observers: [_AppNavigatorObserver()],
   routes: [
-    ShellRoute(
-      navigatorKey: _shellNavigatorKey,
+    GoRoute(
+      path: '/',
+      name: ScreenNames.home,
       builder:
-          (context, state, child) =>
-              GetIt.I.get<Widget>(param1: state, param2: child, instanceName: ScreenNames.shell),
+          (context, state) =>
+              GetIt.I.get<Widget>(instanceName: ScreenNames.home, param1: state, param2: context),
       routes: [
         GoRoute(
-          path: '/',
-          name: ScreenNames.home,
+          path: ScreenNames.helmet,
+          name: ScreenNames.helmet,
           builder:
               (context, state) => GetIt.I.get<Widget>(
-                instanceName: ScreenNames.home,
+                instanceName: ScreenNames.helmet,
                 param1: state,
                 param2: context,
               ),
-          routes: [
-            GoRoute(
-              path: ScreenNames.helmet,
-              name: ScreenNames.helmet,
-              builder:
-                  (context, state) => GetIt.I.get<Widget>(
-                    instanceName: ScreenNames.helmet,
-                    param1: state,
-                    param2: context,
-                  ),
-            ),
-          ],
         ),
       ],
     ),

@@ -1,4 +1,5 @@
-import 'package:ar_gallery/features/helmet/presentation/widgets/back_button_unity.dart';
+import 'package:ar_gallery/generic/strings.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
@@ -20,19 +21,21 @@ class _HelmetScreenState extends State<HelmetScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        UnityWidget(
-          onUnityCreated: _onUnityCreated,
-          onUnitySceneLoaded: onUnitySceneLoaded,
-          useAndroidViewSurface: true, // faster
-          runImmediately: true,
-          fullscreen: false,
-        ),
-        const BackButtonUnity(),
-        // ResetButtonUnity(unityWidgetController: _unityWidgetController,),
-        // const ControlButtonsUnity(),
-      ],
+    return Scaffold(
+      appBar: AppBar(title: Text(Strings.screen_title_helmet.tr())),
+      body: Stack(
+        children: [
+          UnityWidget(
+            onUnityCreated: _onUnityCreated,
+            onUnitySceneLoaded: onUnitySceneLoaded,
+            useAndroidViewSurface: true, // faster
+            runImmediately: true,
+            fullscreen: false,
+          ),
+          // ResetButtonUnity(unityWidgetController: _unityWidgetController,),
+          // const ControlButtonsUnity(),
+        ],
+      ),
     );
   }
 

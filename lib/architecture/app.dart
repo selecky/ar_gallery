@@ -5,7 +5,6 @@ import 'package:ar_gallery/architecture/utils/app_module.dart';
 import 'package:ar_gallery/features/dark_mode/dark_mode_module.dart';
 import 'package:ar_gallery/features/helmet/helmet_module.dart';
 import 'package:ar_gallery/features/home/home_module.dart';
-import 'package:ar_gallery/features/shell/shell_module.dart';
 import 'package:ar_gallery/generic/constants.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
