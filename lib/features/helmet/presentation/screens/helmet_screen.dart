@@ -1,3 +1,6 @@
+import 'package:ar_gallery/features/helmet/presentation/widgets/back_button_unity.dart';
+import 'package:ar_gallery/features/helmet/presentation/widgets/control_buttons_unity.dart';
+import 'package:ar_gallery/features/helmet/presentation/widgets/reset_button_unity.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 
@@ -28,40 +31,9 @@ class _HelmetScreenState extends State<HelmetScreen> {
           runImmediately: true,
           fullscreen: false,
         ),
-        // Positioned(
-        //   top: 16,
-        //   left: 16,
-        //   child: AppButtonIcon(
-        //     iconData: Icons.arrow_back,
-        //     onTap: () {
-        //       context.pop();
-        //     },
-        //   ),
-        // ),
-        // Align(
-        //   alignment: Alignment.topCenter,
-        //   child: Padding(
-        //     padding: const EdgeInsets.only(top: 16),
-        //     child: AppButtonTextUnity(text: 'Reset', width: 96, onTap: () {}),
-        //   ),
-        // ),
-        // Align(
-        //   alignment: Alignment.bottomCenter,
-        //   child: Padding(
-        //     padding: const EdgeInsets.only(bottom: 40),
-        //     child: Row(
-        //       mainAxisSize: MainAxisSize.max,
-        //       mainAxisAlignment: MainAxisAlignment.center,
-        //       children: [
-        //         AppButtonIcon(iconData: Icons.arrow_back_ios_new, onTap: () {}),
-        //         const SizedBox(width: 16),
-        //         AppButtonIcon(iconData: Icons.ac_unit, onTap: () {}),
-        //         const SizedBox(width: 16),
-        //         AppButtonIcon(iconData: Icons.arrow_forward_ios, onTap: () {}),
-        //       ],
-        //     ),
-        //   ),
-        // ),
+        const BackButtonUnity(),
+        ResetButtonUnity(unityWidgetController: _unityWidgetController,),
+        const ControlButtonsUnity(),
       ],
     );
   }
@@ -77,7 +49,11 @@ class _HelmetScreenState extends State<HelmetScreen> {
 
   void _onUnityCreated(UnityWidgetController controller) {
     print('✅ Unity controller created');
-    _unityWidgetController = controller;
+    setState(() {
+      _unityWidgetController = controller;
+    });
     // Avoid calling resume() here directly — wait for the scene to load
   }
 }
+
+
