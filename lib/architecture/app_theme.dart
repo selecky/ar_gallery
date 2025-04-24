@@ -17,6 +17,7 @@ ThemeData _getAppTheme() {
         color: App.appTheme.app_textColor,
       ),
     ),
+    cardTheme: CardTheme(color: App.appTheme.app_cardColor,),
     textTheme: TextTheme(
       displayLarge: TextStyle(
         fontSize: 64,
@@ -119,4 +120,6 @@ extension CustomColors on ThemeData {
   Color get app_tileColor => App.isDarkMode ? const Color(0xFF585858) : Colors.grey[200]!;
 
   Color get app_redColor => App.isDarkMode ? Colors.red[400]! : Colors.red;
+
+  Color get app_cardColor => App.isDarkMode ? app_dividerColor : App.appTheme.cardColor;
 }

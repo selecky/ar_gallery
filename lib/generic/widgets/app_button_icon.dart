@@ -23,7 +23,6 @@ class AppButtonIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<DarkModeBloc, DarkModeState>(
       builder: (context, state) {
-        print('000000000000000000000000000000000000000000');
         return InkWell(
           onTap: onTap,
           borderRadius: BorderRadius.circular(Constants.radiusButton),

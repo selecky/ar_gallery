@@ -22,13 +22,20 @@ class _HomeScreenState extends State<HomeScreen> {
     return AppScreen(
       title: Strings.screen_title_home.tr(),
       hasBackButton: false,
-      child: HomeTile(
-        onTap: () {
-          context.read<HomeBloc>().add(GoToHelmetScreenEvent(context: context));
-          _log.info('helmet icon tapped');
-        },
-        iconData: Icons.headphones,
-        title: Strings.screen_title_helmet.tr(),
+      child: Padding(
+        padding: const EdgeInsets.only(top: 8),
+        child: Wrap(
+          children: [
+            HomeTile(
+              onTap: () {
+                context.read<HomeBloc>().add(GoToHelmetScreenEvent(context: context));
+                _log.info('helmet icon tapped');
+              },
+              svgAssetName: 'assets/images/helmet.svg',
+              title: Strings.screen_title_helmet.tr(),
+            )
+          ],
+        ),
       ),
     );
   }
