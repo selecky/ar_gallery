@@ -1,4 +1,5 @@
 import 'package:ar_gallery/architecture/app.dart';
+import 'package:ar_gallery/generic/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -20,6 +21,7 @@ class HomeTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: onTap,
+      borderRadius: BorderRadius.circular(Constants.radiusCard),
       child: Card(
         child: Padding(
           padding: const EdgeInsets.all(8),
