@@ -32,8 +32,8 @@ class _HelmetScreenState extends State<HelmetScreen> {
           fullscreen: false,
         ),
         const BackButtonUnity(),
-        ResetButtonUnity(unityWidgetController: _unityWidgetController,),
-        const ControlButtonsUnity(),
+        // ResetButtonUnity(unityWidgetController: _unityWidgetController,),
+        // const ControlButtonsUnity(),
       ],
     );
   }
