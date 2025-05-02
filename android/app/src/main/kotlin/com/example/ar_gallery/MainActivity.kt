@@ -1,4 +1,4 @@
-package com.example.ar_gallery
+package com.tomse.ar_gallery
 
 import io.flutter.embedding.android.FlutterFragmentActivity
 
