@@ -48,3 +48,8 @@ app.*.map.json
 /android/unityLibrary/*
 /ios/unityLibrary/*
 /unity/*
+
+# Keystore files
+*.jks
+# Key properties file
+key.properties
